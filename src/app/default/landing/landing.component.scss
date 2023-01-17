@@ -1,3 +1,31 @@
 .logo {
   fill: black !important;
 }
+
+.bg-light {
+  background-color: white !important;
+  color: black !important;
+}
+.nav-item {
+  margin: auto 1rem;
+}
+
+.btn-secondary {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  margin: auto 0re.2m;
+  &:hover {
+    color: white;
+    background: #3141f5 !important;
+  }
+}
+.getting-started {
+  background: linear-gradient(180deg, #fff, #f4f7fa);
+}
+
+#outline {
+  background: #f4f7fa;
+}

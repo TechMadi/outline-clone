@@ -13,34 +13,10 @@ import { createPopper } from '@popperjs/core';
   styleUrls: ['./landing.component.scss'],
 })
 export class LandingComponent implements OnInit, AfterViewInit {
-  showMenu: boolean = false;
-  dropdownPopoverShow = false;
-  @ViewChild('btnDropdownRef', { static: false }) btnDropdownRef!: ElementRef;
-  @ViewChild('popOverDropdownRef', { static: false })
-  popOverDropdownRef!: ElementRef;
-  toggleNavbar() {
-    this.showMenu = !this.showMenu;
-  }
-
+  isMenuCollapsed = true;
+  active = 1;
   constructor() {}
 
   ngOnInit(): void {}
-  ngAfterViewInit() {
-    createPopper(
-      this.btnDropdownRef.nativeElement,
-      this.popOverDropdownRef.nativeElement,
-      {
-        placement: 'bottom-start',
-      }
-    );
-  }
-
-  toggleDropdown(event: any) {
-    event.preventDefault();
-    if (this.dropdownPopoverShow) {
-      this.dropdownPopoverShow = false;
-    } else {
-      this.dropdownPopoverShow = true;
-    }
-  }
+  ngAfterViewInit() {}
 }
